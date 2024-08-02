@@ -85,6 +85,25 @@ namespace TransRiwi.Views
             return opcion;
         }
 
+        public static int ShowQueryMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("=== Consultas ===");
+            Console.WriteLine("1. Ordenar Conductores por experiencia de conducion");
+            Console.WriteLine("2. Todos los usuarios que tiene mas de 30 años");
+            Console.WriteLine("3. Clientes que prefieren pagar con tarjeta de credito");
+            Console.WriteLine("4. Todos los condictores con licencia 'A2'");
+            Console.WriteLine("5. Volver al Menú Principal");
+            Console.Write("Seleccione una opción: ");
+
+            int option;
+            while (!int.TryParse(Console.ReadLine(), out option) || option < 1 || option > 5)
+            {
+                Console.Write("Opción inválida. Intente de nuevo: ");
+            }
+            return option;
+        }
+
         public Customer GetCustomerInfo(Customer customer = null)
         {
             Console.Clear();
