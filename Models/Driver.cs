@@ -27,6 +27,7 @@ namespace TransRiwi.Models
             Console.WriteLine($"Driving Experience: {DrivingExperience} years");
         }
 
+        //Methods de la clase
         public void UpdateLicenseCategory(string newCategory)
         {
             LicenseCategory = newCategory;
