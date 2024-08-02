@@ -11,7 +11,7 @@ namespace TransRiwi.Models
         public string PreferredPaymentMethod { get; set; }
 
         //Constructor
-        public Customer(string name, string lastName, string typeDocument, string identificationNumber, DateTime birthDate, string email, string phoneNumber, string address, string membershipLevel, string preferredPaymentMethod) : base (name, lastName, typeDocument, identificationNumber, birthDate, email, phoneNumber, address)
+        public Customer(string name, string lastName, string typeDocument, string identificationNumber, DateOnly birthDate, string email, string phoneNumber, string address, string membershipLevel, string preferredPaymentMethod) : base (name, lastName, typeDocument, identificationNumber, birthDate, email, phoneNumber, address)
         {
             MembershipLevel = membershipLevel;
             PreferredPaymentMethod = preferredPaymentMethod;

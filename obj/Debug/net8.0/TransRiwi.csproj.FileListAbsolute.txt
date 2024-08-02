@@ -12,3 +12,4 @@
 /home/riwip5-032/Documents/BrayanCsharp/TransRiwi/obj/Debug/net8.0/TransRiwi.pdb
 /home/riwip5-032/Documents/BrayanCsharp/TransRiwi/obj/Debug/net8.0/TransRiwi.genruntimeconfig.cache
 /home/riwip5-032/Documents/BrayanCsharp/TransRiwi/obj/Debug/net8.0/ref/TransRiwi.dll
+/home/riwip5-032/Documents/BrayanCsharp/TransRiwi/obj/Debug/net8.0/TransRiwi.sourcelink.json

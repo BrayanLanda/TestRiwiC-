@@ -85,12 +85,12 @@ namespace TransRiwi.Views
             return opcion;
         }
 
-        public static int ShowQueryMenu()
+        public int ShowQueryMenu()
         {
             Console.Clear();
             Console.WriteLine("=== Consultas ===");
-            Console.WriteLine("1. Ordenar Conductores por experiencia de conducion");
-            Console.WriteLine("2. Todos los usuarios que tiene mas de 30 años");
+            Console.WriteLine("1. Todos los usuarios que tiene mas de 30 años");
+            Console.WriteLine("2. Ordenar Conductores por experiencia de conducion");
             Console.WriteLine("3. Clientes que prefieren pagar con tarjeta de credito");
             Console.WriteLine("4. Todos los condictores con licencia 'A2'");
             Console.WriteLine("5. Volver al Menú Principal");
@@ -122,8 +122,8 @@ namespace TransRiwi.Views
             string documentNumber = Console.ReadLine();
           
             System.Console.Write("Fecha de Nacimiento (YYYY-MM-DD): ");
-            DateTime hireDate;
-            while(!DateTime.TryParse(Console.ReadLine(), out hireDate))
+            DateOnly hireDate;
+            while(!DateOnly.TryParse(Console.ReadLine(), out hireDate))
             {
                 System.Console.Write("Formato invalido. Intente de nuevo (YYYY-MM-DD): ");
             }
@@ -182,8 +182,8 @@ namespace TransRiwi.Views
             string documentNumber = Console.ReadLine();
           
             System.Console.Write("Fecha de nacimiento (YYYY-MM-DD): ");
-            DateTime hireDate;
-            while(!DateTime.TryParse(Console.ReadLine(), out hireDate))
+            DateOnly hireDate;
+            while(!DateOnly.TryParse(Console.ReadLine(), out hireDate))
             {
                 System.Console.Write("Formato invalido. Intente de nuevo (YYYY-MM-DD): ");
             }

@@ -13,13 +13,13 @@ namespace TransRiwi.Models
         protected string LastName { get; set; }
         protected string TypeDocument { get; set; }
         protected string IdentificationNumber { get; set; }
-        protected DateTime BirthDate { get; set; }
+        protected DateOnly BirthDate { get; set; }
         protected string Email { get; set; }
         protected string PhoneNumber { get; set; }
         protected string Address { get; set; }
 
         //Constructor
-        public User(string name, string lastName, string typeDocument, string indentificationNumber, DateTime birthDate, string email, string phoneNumber, string address)
+        public User(string name, string lastName, string typeDocument, string indentificationNumber, DateOnly birthDate, string email, string phoneNumber, string address)
         {
             Id = Guid.NewGuid();
             Name = name;
@@ -32,12 +32,21 @@ namespace TransRiwi.Models
             Address = address;
         }
 
-        //Method para calcular Edad
-        /*protected int CalculateAge()
+        // Method para calcular Edad
+        protected int CalculateAge()
         {
-            int Age = DateTime.Today.Year - DateOnly.TryParse(BirthDate);
-        }*/
+            int Age = DateTime.Today.Year - BirthDate.Year;
+            if (DateTime.Today.Month < BirthDate.Month || (DateTime.Today.Month == BirthDate.Month && DateTime.Today.Day < BirthDate.Day))
+            {
+                Age--;
+            }
+            return Age;
+        }
         //Method para mostrar edad
+        public int GetAge()
+        {
+            return CalculateAge();
+        }
 
         //Method para mostrar informacion
         protected void ShowDetails()
@@ -45,7 +54,7 @@ namespace TransRiwi.Models
             System.Console.WriteLine($"Id: {Id}");
             System.Console.WriteLine($"Name: {Name} {LastName}");
             System.Console.WriteLine($"Document: {TypeDocument}-{IdentificationNumber}");
-            //System.Console.WriteLine($"BirthDate: {BirthDate}");
+            System.Console.WriteLine($"Age: {GetAge()}");
             System.Console.WriteLine($"Email: {Email}");
             System.Console.WriteLine($"Phone: {PhoneNumber}");
             System.Console.WriteLine($"Address: {Address}");

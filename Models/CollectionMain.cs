@@ -52,5 +52,20 @@ namespace TransRiwi.Models
                 System.Console.WriteLine();
             }
         }
+
+        //Queries
+        public List<Driver> GetDriverOlderThan30()
+        {
+            return drivers.Where(s => s.GetAge() > 30).ToList();
+        }
+        public List<Customer> GetCustomerOlderThan30()
+        {
+            return customers.Where(s => s.GetAge() > 30).ToList();
+        }
+
+        public List<Customer> GetCustomersPayWithCard()
+        {
+            return customers.Where(c => c.PreferredPaymentMethod == "tarjeta de credito").ToList();
+        }
     }
 }

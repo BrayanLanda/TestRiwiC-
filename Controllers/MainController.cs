@@ -29,6 +29,9 @@ namespace TransRiwi.Controllers
                     case 3:
                         ManageVehicle();
                         break;
+                    case 4: 
+                        ManageQueries();
+                        break;
                     case 5:
                         exit = true;
                         break;
@@ -92,7 +95,7 @@ namespace TransRiwi.Controllers
             }
         }
 
-         private void ManageVehicle()
+        private void ManageVehicle()
         {
             bool back = false;
             while (!back)
@@ -108,6 +111,33 @@ namespace TransRiwi.Controllers
                         break;
                     case 3:
                         DeleteVehicle();
+                        break;
+                    case 4:
+                        ShowVehicles();
+                        break;
+                    case 5:
+                        back = true;
+                        break;
+                }
+            }
+        }
+
+        private void ManageQueries()
+        {
+            bool back = false;
+            while (!back)
+            {
+                int option = _view.ShowQueryMenu();
+                switch (option)
+                {
+                    case 1:
+                        ShowDriverOlderThan30();
+                        break;
+                    case 2:
+                        EditVehicle();
+                        break;
+                    case 3:
+                        ShowCustomersPayWithCard();
                         break;
                     case 4:
                         ShowVehicles();
@@ -138,21 +168,25 @@ namespace TransRiwi.Controllers
             _app.AddDriver(newDriver);
             _view.ShowMessage("Conductor agregado con exito");
         }
+
         //Implementacion metodos para mostrar informacion
         private void ShowCustomers()
-        {
+        {   
+            System.Console.WriteLine("-------------------------------------");
             _app.ShowCustomers();
-            _view.ShowMessage("---------------------------");
+            _view.ShowMessage("-------------------------------------");
         }
         private void ShowDrivers()
-        {
+        {   
+            System.Console.WriteLine("-------------------------------------");
             _app.ShowDrivers();
-            _view.ShowMessage("---------------------------");
+            _view.ShowMessage("-------------------------------------");
         }
         private void ShowVehicles()
-        {
+        {   
+            System.Console.WriteLine("-------------------------------------");
             _app.ShowVehicle();
-            _view.ShowMessage("---------------------------");
+            _view.ShowMessage("-------------------------------------");
         }
 
         //Implementacion metodos para eliminar
@@ -199,6 +233,7 @@ namespace TransRiwi.Controllers
             // }
         }
 
+        //Implementacion metodos para editar
         private void EditCustomer()
         {
             Guid id = _view.GetIdForAction("Editar");
@@ -239,6 +274,27 @@ namespace TransRiwi.Controllers
             else
             {
                 _view.ShowMessage("Cliente no encontrado");
+            }
+        }
+
+        //Implementacion queries
+        private void ShowDriverOlderThan30()
+        {
+            var drivers = _app.GetCustomerOlderThan30();
+            foreach(var driver in drivers)
+            {
+                driver.SetShowDetails();
+                System.Console.WriteLine("------------------------------------");
+            }
+        }
+
+        private void ShowCustomersPayWithCard()
+        {
+            var customers = _app.GetCustomersPayWithCard();
+            foreach(var customer in customers)
+            {
+                customer.SetShowDetails();
+                System.Console.WriteLine("------------------------------------");
             }
         }
     }
