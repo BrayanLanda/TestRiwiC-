@@ -40,7 +40,7 @@ namespace TransRiwi.Models
         //Method para mostrar edad
 
         //Method para mostrar informacion
-        protected void ShowDetails()
+        protected virtual void ShowDetails()
         {
             System.Console.WriteLine($"Id: {Id}");
             System.Console.WriteLine($"Name: {Name} {LastName}");
@@ -51,6 +51,11 @@ namespace TransRiwi.Models
             System.Console.WriteLine($"Address: {Address}");
         }
 
+        public virtual void SetShowDetails()
+        {
+            ShowDetails();
+        }
+        
         //Setting and getting
         public void SetId(Guid id)
         {

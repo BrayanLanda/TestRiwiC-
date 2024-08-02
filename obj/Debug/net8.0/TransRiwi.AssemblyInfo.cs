@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TransRiwi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f7d9bc97ddd30add6de528afad3fcfac863bf45a")]
 [assembly: System.Reflection.AssemblyProductAttribute("TransRiwi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TransRiwi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
