@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using TransRiwi.Models;
 
 namespace TransRiwi.Views
 {
@@ -82,6 +83,134 @@ namespace TransRiwi.Views
                 System.Console.Write("Invalid Option, Try Again: ");
             }
             return opcion;
+        }
+
+        public Customer GetCustomerInfo(Customer customer = null)
+        {
+            Console.Clear();
+            System.Console.WriteLine(customer == null ? "==== Agregar un nuevo customer ====" : "==== Editar un customer ====");
+
+            System.Console.Write("Nombre: ");
+            string name = Console.ReadLine();
+
+            System.Console.Write("Apellido: ");
+            string lastName = Console.ReadLine();
+
+            System.Console.Write("Tipo de Documento: ");
+            string documentType = Console.ReadLine();
+            
+            System.Console.Write("Numero de Documento: ");
+            string documentNumber = Console.ReadLine();
+          
+            System.Console.Write("Fecha de Nacimiento (YYYY-MM-DD): ");
+            DateTime hireDate;
+            while(!DateTime.TryParse(Console.ReadLine(), out hireDate))
+            {
+                System.Console.Write("Formato invalido. Intente de nuevo (YYYY-MM-DD): ");
+            }
+
+            System.Console.Write("Email: ");
+            string email = Console.ReadLine();
+
+            System.Console.Write("Telefono: ");
+            string phone = Console.ReadLine();
+
+            System.Console.Write("Direccion: ");
+            string address = Console.ReadLine();
+
+            System.Console.Write("Nivel de afilacion: ");
+            string membershipLevel = Console.ReadLine();
+
+            System.Console.Write("Metodo preferido de pago: ");
+            string preferredPaymentMethod = Console.ReadLine();
+
+            if(customer == null)
+            {
+                return new Customer(name, lastName, documentType, documentNumber,hireDate, email, phone, address, membershipLevel, preferredPaymentMethod);
+            }
+            else
+            {
+                //Actualizar datos del customer existente
+                customer.SetName(name);
+                customer.SetLastName(lastName);
+                customer.SetTypeDocument(documentType);
+                customer.SetIdentificationNumber(documentNumber);
+                customer.SetEmail(email);
+                customer.SetPhoneNumber(phone);
+                customer.SetAddress(address);
+                customer.MembershipLevel = membershipLevel;
+                customer.PreferredPaymentMethod = preferredPaymentMethod;
+
+                return customer;
+            }
+        }
+
+        public Driver GetDriverInfo(Driver driver = null)
+        {
+            Console.Clear();
+            System.Console.WriteLine(driver == null ? "==== Agregar un nuevo driver ====" : "==== Editar un driver ====");
+
+            System.Console.Write("Nombre: ");
+            string name = Console.ReadLine();
+
+            System.Console.Write("Apellido: ");
+            string lastName = Console.ReadLine();
+
+            System.Console.Write("Tipo de Documento: ");
+            string documentType = Console.ReadLine();
+            
+            System.Console.Write("Numero de Documento: ");
+            string documentNumber = Console.ReadLine();
+          
+            System.Console.Write("Fecha de nacimiento (YYYY-MM-DD): ");
+            DateTime hireDate;
+            while(!DateTime.TryParse(Console.ReadLine(), out hireDate))
+            {
+                System.Console.Write("Formato invalido. Intente de nuevo (YYYY-MM-DD): ");
+            }
+
+            System.Console.Write("Email: ");
+            string email = Console.ReadLine();
+
+            System.Console.Write("Telefono: ");
+            string phone = Console.ReadLine();
+
+            System.Console.Write("Direccion: ");
+            string address = Console.ReadLine();
+
+            System.Console.Write("Numero de licencia: ");
+            string licenseNumber = Console.ReadLine();
+
+            System.Console.Write("Categoria de licencia: ");
+            string licenseCategory = Console.ReadLine();
+
+            System.Console.Write("Experiencia Manejando (YYYY): ");
+            int drivingExperience;
+            while(!int.TryParse(Console.ReadLine(), out drivingExperience))
+            {
+                System.Console.Write("Formato invalido. Intente de nuevo: ");
+            }
+
+            if(driver == null)
+            {
+                return new Driver(name, lastName, documentType, documentNumber,hireDate, email, phone, address, licenseNumber, licenseCategory, drivingExperience);
+            }
+            else
+            {
+                //Actualizar datos del driver existente
+                driver.SetName(name);
+                driver.SetLastName(lastName);
+                driver.SetTypeDocument(documentType);
+                driver.SetIdentificationNumber(documentNumber);
+                driver.SetEmail(email);
+                driver.SetPhoneNumber(phone);
+                driver.SetAddress(address);
+                driver.LicenseNumber = licenseNumber;
+                driver.LicenseCategory = licenseCategory;
+                driver.DrivingExperience = drivingExperience;
+
+                return driver;
+            }
         }
 
         //Solicitar un id para editar o eliminar

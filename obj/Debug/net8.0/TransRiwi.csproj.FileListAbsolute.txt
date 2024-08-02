@@ -1,0 +1,14 @@
+/home/riwip5-032/Documents/BrayanCsharp/TransRiwi/bin/Debug/net8.0/TransRiwi
+/home/riwip5-032/Documents/BrayanCsharp/TransRiwi/bin/Debug/net8.0/TransRiwi.deps.json
+/home/riwip5-032/Documents/BrayanCsharp/TransRiwi/bin/Debug/net8.0/TransRiwi.runtimeconfig.json
+/home/riwip5-032/Documents/BrayanCsharp/TransRiwi/bin/Debug/net8.0/TransRiwi.dll
+/home/riwip5-032/Documents/BrayanCsharp/TransRiwi/bin/Debug/net8.0/TransRiwi.pdb
+/home/riwip5-032/Documents/BrayanCsharp/TransRiwi/obj/Debug/net8.0/TransRiwi.GeneratedMSBuildEditorConfig.editorconfig
+/home/riwip5-032/Documents/BrayanCsharp/TransRiwi/obj/Debug/net8.0/TransRiwi.AssemblyInfoInputs.cache
+/home/riwip5-032/Documents/BrayanCsharp/TransRiwi/obj/Debug/net8.0/TransRiwi.AssemblyInfo.cs
+/home/riwip5-032/Documents/BrayanCsharp/TransRiwi/obj/Debug/net8.0/TransRiwi.csproj.CoreCompileInputs.cache
+/home/riwip5-032/Documents/BrayanCsharp/TransRiwi/obj/Debug/net8.0/TransRiwi.dll
+/home/riwip5-032/Documents/BrayanCsharp/TransRiwi/obj/Debug/net8.0/refint/TransRiwi.dll
+/home/riwip5-032/Documents/BrayanCsharp/TransRiwi/obj/Debug/net8.0/TransRiwi.pdb
+/home/riwip5-032/Documents/BrayanCsharp/TransRiwi/obj/Debug/net8.0/TransRiwi.genruntimeconfig.cache
+/home/riwip5-032/Documents/BrayanCsharp/TransRiwi/obj/Debug/net8.0/ref/TransRiwi.dll

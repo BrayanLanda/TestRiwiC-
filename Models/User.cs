@@ -13,13 +13,13 @@ namespace TransRiwi.Models
         protected string LastName { get; set; }
         protected string TypeDocument { get; set; }
         protected string IdentificationNumber { get; set; }
-        protected DateOnly BirthDate { get; set; }
+        protected DateTime BirthDate { get; set; }
         protected string Email { get; set; }
         protected string PhoneNumber { get; set; }
         protected string Address { get; set; }
 
         //Constructor
-        public User(string name, string lastName, string typeDocument, string indentificationNumber, DateOnly birthDate, string email, string phoneNumber, string address)
+        public User(string name, string lastName, string typeDocument, string indentificationNumber, DateTime birthDate, string email, string phoneNumber, string address)
         {
             Id = Guid.NewGuid();
             Name = name;
@@ -40,7 +40,7 @@ namespace TransRiwi.Models
         //Method para mostrar edad
 
         //Method para mostrar informacion
-        protected virtual void ShowDetails()
+        protected void ShowDetails()
         {
             System.Console.WriteLine($"Id: {Id}");
             System.Console.WriteLine($"Name: {Name} {LastName}");

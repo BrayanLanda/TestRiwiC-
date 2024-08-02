@@ -27,6 +27,18 @@ namespace TransRiwi.Models
             Owner = new List<Driver>();
         }
 
+        //Method mostrar detalles
+        public void ShowDetails()
+        {
+            System.Console.WriteLine($"Id: {Id}");
+            System.Console.WriteLine($"Placa: {Placa}");
+            System.Console.WriteLine($"Tipo: {Type}");
+            System.Console.WriteLine($"Número de Enigie: {EnigeNumber}");
+            System.Console.WriteLine($"Número de Serie: {SerialNumber}");
+            System.Console.WriteLine($"Capacidad de personas: {PeopleCapacity}");
+            
+        }
+
         //Methods para encontrar y eliminar un vehiculo
         // public int FindVehiculeById(int id)
         // {

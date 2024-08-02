@@ -12,7 +12,7 @@ namespace TransRiwi.Models
         public int DrivingExperience { get; set; }
 
         //Constructor
-        public Driver(string name, string lastName, string typeDocument, string identificationNumber, DateOnly birthDate, string email, string phoneNumber, string address, string licenseNumber, string licenseCategory, int drivingExperience) : base (name, lastName, typeDocument, identificationNumber, birthDate, email, phoneNumber, address)
+        public Driver(string name, string lastName, string typeDocument, string identificationNumber, DateTime birthDate, string email, string phoneNumber, string address, string licenseNumber, string licenseCategory, int drivingExperience) : base (name, lastName, typeDocument, identificationNumber, birthDate, email, phoneNumber, address)
         {
             LicenseNumber = licenseNumber;
             LicenseCategory = licenseCategory;
